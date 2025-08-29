@@ -1,0 +1,106 @@
+% preambulo.tex
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{bm}
+\usepackage[many]{tcolorbox}
+\renewcommand{\contentsname}{Sumário}
+
+\geometry{a4paper, margin=1.8cm}
+\setlength{\headheight}{16pt}
+
+% Cores e Estilo
+\definecolor{aiBlue}{RGB}{44,130,201}
+\definecolor{aiGray}{RGB}{36,36,36}
+\definecolor{aiBox}{RGB}{239,243,251}
+\definecolor{aiExample}{RGB}{27,163,156}
+\definecolor{aiQuote}{RGB}{175,122,197}
+
+% Configuração de Títulos
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{aiBlue}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{aiBlue}}
+  {\thesubsection}{1em}{}
+
+% Cabeçalho e Rodapé
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{aiBlue}{AIMA}}
+\lhead{\textcolor{aiGray}{Inteligência Artificial}}
+\cfoot{\thepage}
+
+% Caixa para definições/conceitos
+\newtcolorbox{conceptbox}{
+  colback=aiBox,
+  colframe=aiBlue,
+  sharp corners,
+  boxrule=1pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=10pt,
+  after skip=10pt,
+  fontupper=\small,
+}
+
+% Caixa para exemplos
+\newtcolorbox{examplebox}{
+  colback=aiBox,
+  colframe=aiExample,
+  sharp corners,
+  boxrule=0.8pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=10pt,
+  after skip=10pt,
+  title=Exemplo,
+  fonttitle=\bfseries\color{aiExample}
+}
+
+% Caixa para citações
+\newtcolorbox{quotebox}{
+  colback=white,
+  colframe=aiQuote,
+  sharp corners,
+  boxrule=1pt,
+  left=12pt,
+  right=12pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=10pt,
+  after skip=10pt,
+  fontupper=\itshape\small,
+  title=Citação,
+  fonttitle=\bfseries\color{aiQuote}
+}
+
+% Caixa para diagramas
+\newtcolorbox{diagrambox}{
+  colback=aiBox,
+  colframe=aiGray,
+  sharp corners,
+  boxrule=1pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=10pt,
+  after skip=10pt,
+  title=Diagrama,
+  fonttitle=\bfseries\color{aiGray},
+  halign=center
+}
