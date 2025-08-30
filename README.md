@@ -6,11 +6,13 @@ A ideia é centralizar os resumos e exemplos em um só lugar, facilitando revis�
 ## Estrutura
 ```txt
 📂 notas_livros/
-├── 📂 inteligencia-artificial_russell/
+├── 📂 nome-do-livro_autor/
 │   ├── 📂 capitulos/
 │   │   └── cap01_introducao.tex
 │   ├── 📂 imagens/
+│   │   └── imagem01.jpeg
 │   ├── 📂 compilados/
+│   │   └── anotacoes.pdf
 │   ├── 📄 main.tex
 │   ├── 📄 preambulo.tex
 │   ├── 📄 bibliografia.bib
@@ -35,7 +37,7 @@ Cada livro deste repositório possui um arquivo Makefile que automatiza o proces
 
 - Acesse a pasta do livro desejado.*Exemplo* :
 >```bash
->cd inteligencia-artificial_russell
+>cd nome-do-livro_autor
 >```
 
 - Compile o projeto  
@@ -45,7 +47,7 @@ Este comando **compila** o arquivo `main.tex` e move o `.pdf` gerado para o dire
 >make
 >```
 
-Exemplo de saída: `compilados/inteligencia_artificial_completo.pdf`
+Exemplo de saída: `compilados/anotacoes.pdf`
 
 - **Limpe arquivos** temporários do LaTeX. (mantém apenas o PDF final)
 
@@ -59,13 +61,10 @@ Exemplo de saída: `compilados/inteligencia_artificial_completo.pdf`
 >make cleanall
 >```
 
-  
-
 ## Observações
 - É necessário ter um compilador LaTeX instalado, como o pdflatex (disponível no pacote TeX Live para Linux, macOS ou Windows).
 - Os arquivos temporários (como .aux, .log) nunca são versionados no GitHub, graças ao .gitignore já incluído.
 - Você pode adaptar o nome do PDF a ser gerado modificando a variável correspondente no topo do Makefile.
-
 
 ## Licença
 Este projeto está licenciado sob a licença `MIT`.   
