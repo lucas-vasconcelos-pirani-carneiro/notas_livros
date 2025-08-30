@@ -1,5 +1,5 @@
 # Nome do PDF final
-PDFNAME   = inteligencia_artificial_completo
+PDFNAME   = anotacoes
 
 # Nome do arquivo principal do LaTeX
 TEX       = main.tex
