@@ -1,0 +1,96 @@
+% preambulo.tex
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{bm}
+\usepackage[many]{tcolorbox}
+\renewcommand{\contentsname}{Sumário}
+
+\geometry{a4paper, margin=2cm}
+\setlength{\headheight}{16pt} % Ajuste para warning do cabeçalho
+
+% Cores
+\definecolor{logicRed}{RGB}{178,34,34}
+\definecolor{logicGray}{RGB}{80,80,80}
+\definecolor{logicBox}{RGB}{243,240,235}
+\definecolor{logicBlue}{RGB}{52,106,150}
+\definecolor{logicGreen}{RGB}{22,128,22}
+
+% Títulos
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{logicRed}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{logicRed}}
+  {\thesubsection}{1em}{}
+
+% Cabeçalho e rodapé
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{logicRed}{Lógica}}
+\lhead{\textcolor{logicGray}{Mortari}}
+\cfoot{\thepage}
+
+% Ambientes
+\newtcolorbox{defbox}{
+  colback=logicBox,
+  colframe=logicRed,
+  sharp corners,
+  boxrule=1pt,
+  before skip=10pt,
+  after skip=10pt,
+  fonttitle=\bfseries\color{logicRed},
+  title=Definição
+}
+\newtcolorbox{theorembox}{
+  colback=logicBox,
+  colframe=logicBlue,
+  sharp corners,
+  boxrule=1pt,
+  before skip=10pt,
+  after skip=10pt,
+  fonttitle=\bfseries\color{logicBlue},
+  title=Teorema
+}
+\newtcolorbox{proofbox}{
+  colback=white,
+  colframe=logicGray,
+  sharp corners,
+  boxrule=0.8pt,
+  before skip=10pt,
+  after skip=10pt,
+  fonttitle=\bfseries\color{logicGray},
+  title=Demonstração
+}
+\newtcolorbox{examplebox}{
+  colback=logicBox,
+  colframe=logicGreen,
+  sharp corners,
+  boxrule=1pt,
+  before skip=8pt,
+  after skip=8pt,
+  fonttitle=\bfseries\color{logicGreen},
+  title=Exemplo
+}
+\newtcolorbox{ttbox}{
+  colback=white,
+  colframe=logicRed,
+  sharp corners,
+  boxrule=0.8pt,
+  left=4pt,
+  right=4pt,
+  before skip=10pt,
+  after skip=10pt,
+  title=Tabela-Verdade,
+  fonttitle=\bfseries\color{logicRed}
+}
