@@ -1,0 +1,101 @@
+% preambulo.tex
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{bm}
+\usepackage[many]{tcolorbox}
+\renewcommand{\contentsname}{Sumário}
+
+\geometry{a4paper, margin=2cm}
+\setlength{\headheight}{16pt} % Ajustado para evitar warnings
+
+% Cores
+\definecolor{kuroseBlue}{RGB}{47,83,150}
+\definecolor{kuroseGray}{RGB}{60,60,60}
+\definecolor{kuroseBoxA}{RGB}{233,240,252}
+\definecolor{kuroseGreen}{RGB}{13,132,95}
+\definecolor{kuroseCyan}{RGB}{41,171,226}
+\definecolor{kuroseOrange}{RGB}{223,133,33}
+
+% Títulos
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{kuroseBlue}}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{kuroseBlue}}
+  {\thesubsection}{1em}{}
+
+% Cabeçalho e rodapé
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textcolor{kuroseBlue}{Kurose \& Ross}}
+\lhead{\textcolor{kuroseGray}{Redes - Top-Down}}
+\cfoot{\thepage}
+
+% Ambientes
+\newtcolorbox{defbox}{
+  colback=kuroseBoxA,
+  colframe=kuroseBlue,
+  sharp corners,
+  boxrule=1pt,
+  before skip=10pt,
+  after skip=10pt,
+  fonttitle=\bfseries\color{kuroseBlue},
+  title=Definição
+}
+\newtcolorbox{protocolbox}{
+  colback=white,
+  colframe=kuroseCyan,
+  sharp corners,
+  boxrule=1.2pt,
+  before skip=10pt,
+  after skip=10pt,
+  fonttitle=\bfseries\color{kuroseCyan},
+  title=Protocolo
+}
+\newtcolorbox{examplebox}{
+  colback=kuroseBoxA,
+  colframe=kuroseGreen,
+  sharp corners,
+  boxrule=0.9pt,
+  before skip=7pt,
+  after skip=7pt,
+  fonttitle=\bfseries\color{kuroseGreen},
+  title=Exemplo
+}
+\newtcolorbox{diagrambox}{
+  colback=white,
+  colframe=kuroseGray,
+  sharp corners,
+  boxrule=1.2pt,
+  left=8pt,
+  right=8pt,
+  top=8pt,
+  bottom=8pt,
+  before skip=8pt,
+  after skip=8pt,
+  fonttitle=\bfseries\color{kuroseGray},
+  title=Diagrama,
+  halign=center
+}
+\newtcolorbox{notebox}{
+  colback=kuroseOrange!20,
+  colframe=kuroseOrange,
+  sharp corners,
+  boxrule=0.8pt,
+  left=8pt,
+  right=8pt,
+  before skip=6pt,
+  after skip=6pt,
+  fonttitle=\bfseries\color{kuroseOrange},
+  title=Dica/Nota
+}
