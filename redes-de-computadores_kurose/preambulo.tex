@@ -27,6 +27,8 @@
 \definecolor{kuroseGreen}{RGB}{13,132,95}
 \definecolor{kuroseCyan}{RGB}{41,171,226}
 \definecolor{kuroseOrange}{RGB}{223,133,33}
+\definecolor{kuroseViolet}{RGB}{98,70,182}
+\definecolor{kuroseVioletLight}{RGB}{208,205,245}
 
 % Títulos
 \titleformat{\section}
@@ -51,29 +53,32 @@
   boxrule=1pt,
   before skip=10pt,
   after skip=10pt,
-  fonttitle=\bfseries\color{kuroseBlue},
+  fonttitle=\bfseries\color{white},
   title=Definição
 }
+
 \newtcolorbox{protocolbox}{
-  colback=white,
-  colframe=kuroseCyan,
+  colback=kuroseBoxA,
+  colframe=kuroseBlue,
   sharp corners,
   boxrule=1.2pt,
   before skip=10pt,
   after skip=10pt,
-  fonttitle=\bfseries\color{kuroseCyan},
+  fonttitle=\bfseries\color{white},
   title=Protocolo
 }
+
 \newtcolorbox{examplebox}{
   colback=kuroseBoxA,
-  colframe=kuroseGreen,
+  colframe=kuroseBlue,
   sharp corners,
   boxrule=0.9pt,
   before skip=7pt,
   after skip=7pt,
-  fonttitle=\bfseries\color{kuroseGreen},
+  fonttitle=\bfseries\color{white},
   title=Exemplo
 }
+
 \newtcolorbox{diagrambox}{
   colback=white,
   colframe=kuroseGray,
@@ -85,20 +90,21 @@
   bottom=8pt,
   before skip=8pt,
   after skip=8pt,
-  fonttitle=\bfseries\color{kuroseGray},
+  fonttitle=\bfseries\color{white},
   title=Diagrama,
   halign=center
 }
+
 \newtcolorbox{notebox}{
-  colback=kuroseOrange!20,
-  colframe=kuroseOrange,
+  colback=white,
+  colframe=kuroseCyan,
   sharp corners,
   boxrule=0.8pt,
   left=8pt,
   right=8pt,
   before skip=6pt,
   after skip=6pt,
-  fonttitle=\bfseries\color{kuroseOrange},
+  fonttitle=\bfseries\color{white},
   title=Dica/Nota
 }
 
@@ -137,19 +143,5 @@
              {Á}{{\'A}}1 {Â}{{\^A}}1 {É}{{\'E}}1
              {Ê}{{\^E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1
              {Ô}{{\^O}}1 {Õ}{{\~O}}1 {Ú}{{\'U}}1 {Ç}{{\c{C}}}1
-}
-
-
-
-\newtcolorbox{terminalbox}{
-  colback=terminalbg,
-  colframe=terminalframe,
-  boxrule=0.4pt,
-  sharp corners,
-  fontupper=\ttfamily\small\color{terminaltext},
-  left=10pt, right=10pt, top=7pt, bottom=7pt,
-  before skip=10pt, after skip=10pt,
-  listing only,
-  listing options={style=terminal}
 }
 
