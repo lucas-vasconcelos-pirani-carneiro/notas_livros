@@ -40,9 +40,15 @@
 \lhead{\textcolor{aiGray}{Inteligência Artificial}}
 \cfoot{\thepage}
 
-% Caixa para definições/conceitos
+% Definindo tons azuis para os boxes
+\definecolor{aiBlue}{RGB}{44,130,201}       % Azul principal
+\definecolor{aiBlueLight}{RGB}{220,236,249} % Fundo bem claro para caixas
+\definecolor{aiBlueMid}{RGB}{112,161,231}   % Azul intermediário
+\definecolor{aiBlueDark}{RGB}{30,71,125}    % Azul escuro para destaques
+
+% Caixa para definições/conceitos (fundo azul claro, borda azul principal)
 \newtcolorbox{conceptbox}{
-  colback=aiBox,
+  colback=aiBlueLight,
   colframe=aiBlue,
   sharp corners,
   boxrule=1pt,
@@ -55,10 +61,10 @@
   fontupper=\small,
 }
 
-% Caixa para exemplos
+% Caixa para exemplos (fundo branco azulado, borda azul médio, título azul escuro)
 \newtcolorbox{examplebox}{
-  colback=aiBox,
-  colframe=aiExample,
+  colback=aiBlueLight,
+  colframe=aiBlue,
   sharp corners,
   boxrule=0.8pt,
   left=6pt,
@@ -68,13 +74,13 @@
   before skip=10pt,
   after skip=10pt,
   title=Exemplo,
-  fonttitle=\bfseries\color{aiExample}
+  fonttitle=\bfseries\color{white}
 }
 
-% Caixa para citações
+% Caixa para citações (fundo branco, borda azul escuro, título azul escuro)
 \newtcolorbox{quotebox}{
   colback=white,
-  colframe=aiQuote,
+  colframe=aiBlueDark,
   sharp corners,
   boxrule=1pt,
   left=12pt,
@@ -85,13 +91,13 @@
   after skip=10pt,
   fontupper=\itshape\small,
   title=Citação,
-  fonttitle=\bfseries\color{aiQuote}
+  fonttitle=\bfseries\color{white}
 }
 
-% Caixa para diagramas
+% Caixa para diagramas (fundo azul claro, borda azul principal, título azul escuro)
 \newtcolorbox{diagrambox}{
-  colback=aiBox,
-  colframe=aiGray,
+  colback=aiBlueLight,
+  colframe=aiBlue,
   sharp corners,
   boxrule=1pt,
   left=8pt,
@@ -101,6 +107,22 @@
   before skip=10pt,
   after skip=10pt,
   title=Diagrama,
-  fonttitle=\bfseries\color{aiGray},
+  fonttitle=\bfseries\color{white},
   halign=center
+}
+
+% Caixa para definições (Definição)
+\newtcolorbox{definitionbox}{
+  colback=aiBlueLight,
+  colframe=aiBlue,
+  sharp corners,
+  boxrule=1pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt,
+  before skip=10pt,
+  after skip=10pt,
+  title=\underline{\underline{($\ast$) Definição}} : ,
+  fonttitle=\bfseries\color{white}
 }
