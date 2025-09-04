@@ -12,8 +12,12 @@ $(OUTDIR)/$(PDFNAME).pdf: $(TEX)
 clean:
 	rm -f *.aux *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.bbl *.blg
 
-cleanall:
-	rm -f *.aux *.log *.out *.toc *.synctex.gz *.fls *.fdb_latexmk *.bbl *.blg
-	rm -rf $(OUTDIR)/*.pdf
+cleanall: clean
+	rm -f $(OUTDIR)/$(PDFNAME).pdf
 
 .PHONY: all clean cleanall
+
+all:
+	mkdir -p $(OUTDIR)
+	pdflatex $(TEX)
+	mv main.pdf $(OUTDIR)/$(PDFNAME).pdf

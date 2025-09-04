@@ -22,9 +22,6 @@
 % Cores
 \definecolor{logicRed}{RGB}{178,34,34}
 \definecolor{logicGray}{RGB}{80,80,80}
-\definecolor{logicBox}{RGB}{243,240,235}
-\definecolor{logicBlue}{RGB}{52,106,150}
-\definecolor{logicGreen}{RGB}{22,128,22}
 
 % Títulos
 \titleformat{\section}
@@ -41,50 +38,61 @@
 \lhead{\textcolor{logicGray}{Mortari}}
 \cfoot{\thepage}
 
-% Ambientes
+% Definições das cores (adicione antes de usar as boxes)
+\definecolor{logicRed1}{RGB}{217, 80, 80}     % Vermelho principal
+\definecolor{logicRed2}{RGB}{233, 150, 122}   % Vermelho claro/quase salmão
+\definecolor{logicRed3}{RGB}{220, 67, 67}     % Vermelho mais escuro
+\definecolor{logicRed4}{RGB}{250, 200, 200}   % Vermelho bem clarinho
+\definecolor{logicRed5}{RGB}{170, 44, 44}     % Vermelho bem escuro
+
+% Boxes em tons de vermelho
+
 \newtcolorbox{defbox}{
-  colback=logicBox,
-  colframe=logicRed,
+  colback=logicRed4,
+  colframe=logicRed3,
   sharp corners,
   boxrule=1pt,
   before skip=10pt,
   after skip=10pt,
-  fonttitle=\bfseries\color{logicRed},
+  fonttitle=\bfseries\color{white},
   title=Definição
 }
+
 \newtcolorbox{theorembox}{
-  colback=logicBox,
-  colframe=logicBlue,
+  colback=logicRed4,
+  colframe=logicRed3,
   sharp corners,
   boxrule=1pt,
   before skip=10pt,
   after skip=10pt,
-  fonttitle=\bfseries\color{logicBlue},
+  fonttitle=\bfseries\color{white},
   title=Teorema
 }
+
 \newtcolorbox{proofbox}{
-  colback=white,
-  colframe=logicGray,
+  colback=logicRed4,
+  colframe=logicRed3,
   sharp corners,
   boxrule=0.8pt,
   before skip=10pt,
   after skip=10pt,
-  fonttitle=\bfseries\color{logicGray},
+  fonttitle=\bfseries\color{white},
   title=Demonstração
 }
+
 \newtcolorbox{examplebox}{
-  colback=logicBox,
-  colframe=logicGreen,
+  colback=logicRed4,
+  colframe=logicRed3,
   sharp corners,
   boxrule=1pt,
   before skip=8pt,
   after skip=8pt,
-  fonttitle=\bfseries\color{logicGreen},
+  fonttitle=\bfseries\color{white},
   title=Exemplo
 }
 \newtcolorbox{ttbox}{
-  colback=white,
-  colframe=logicRed,
+  colback=logicRed4,
+  colframe=logicRed3,
   sharp corners,
   boxrule=0.8pt,
   left=4pt,
@@ -92,5 +100,5 @@
   before skip=10pt,
   after skip=10pt,
   title=Tabela-Verdade,
-  fonttitle=\bfseries\color{logicRed}
+  fonttitle=\bfseries\color{white}
 }
